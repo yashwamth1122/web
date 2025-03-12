@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: white;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .logo {
+            font-family: 'Lobster', cursive;
+            font-size: 28px;
+            color: white;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: white;
+            left: 50%;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 50px;
+            font-family: 'Roboto', sans-serif;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+        .hero span {
+            font-family: 'Lobster', cursive;
+            color: yellow;
+        }
+        .hero button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            background: yellow;
+            color: black;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .hero button::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+            transition: transform 0.5s;
+        }
+        .hero button:active::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .blog-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px;
+        }
+        .blog-card {
+            width: 300px;
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+        .blog-card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .blog-card:hover img {
+            transform: scale(1.1);
+        }
+        .categories {
+            text-align: center;
+            padding: 50px;
+        }
+        .category-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .category-buttons button {
+            padding: 15px;
+            border-radius: 50%;
+            border: none;
+            background: white;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .category-buttons button:hover {
+            background: yellow;
+            transform: scale(1.1);
+        }
+        .subscribe {
+            text-align: center;
+            padding: 50px;
+        }
+        .subscribe input {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+        .subscribe button {
+            padding: 10px 20px;
+            border: none;
+            background: yellow;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 5px yellow;
+        }
+        .subscribe button:hover {
+            box-shadow: 0 0 15px yellow;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons i {
+            font-size: 25px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .social-icons i:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">My Blog</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Categories</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to <span>My Blog</span></h1>
+        <button>Explore Now</button>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-card">
+            <img src="https://media.istockphoto.com/id/1215274990/photo/high-wide-angle-view-of-charminar-in-the-night.jpg?s=612x612&w=0&k=20&c=byyIjqgbslf-L191n6SJu0s35fvNoVeWsxV5rIPK7Sk=">
+            <h3>Blog Title 1</h3>
+            <p>The Charminar (lit. 'four minarets') is a monument located in Hyderabad, Telangana, India. Constructed in 1591, the landmark is a symbol of Hyderabad and officially incorporated in the emblem of Telangana.</p>
+        </div>
+        <div class="blog-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Taj_Mahal_2%2C_Agra%2C_India.jpg">
+            <h3>Blog Title 2</h3>
+            <p>The Taj Mahal (/ˌtɑːdʒ məˈhɑːl, ˌtɑːʒ -/ TAHJ mə-HAHL, TAHZH -⁠; Hindi: [taːdʒ ˈmɛɦ(ɛ)l]; lit. 'Crown of the Palace') is an ivory-white marble mausoleum on the right bank of the river Yamuna in Agra, Uttar Pradesh, India.</p>
+        </div>
+        <div class="blog-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Salar_Jung_Museum%2C_Hyderabad%2C_India.jpg">
+            <h3>Blog Title 3</h3>
+            <p>The Salar Jung Museum is an art museum located at Dar-ul-Shifa, on the southern bank of the Musi River in the city of Hyderabad, Telangana, India. It is one of the notable National Museums of India.</p>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2>Categories</h2>
+        <div class="category-buttons">
+            <button>Tech</button>
+            <button>Travel</button>
+            <button>Food</button>
+            <button>Fashion</button>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <h2>Subscribe to Our Newsletter</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <button>Subscribe</button>
+    </section>
+
+    <footer>
+        <p>Follow us on</p>
+        <div class="social-icons">
+            <i>FB</i>
+            <i>IG</i>
+            <i>TW</i>
+        </div>
+    </footer>
+
+</body>
+</html>
