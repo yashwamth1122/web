@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITW Website Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .header {
+            background: #002147;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo img {
+            height: 60px;
+        }
+        .site-title {
+            margin-left: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar {
+            background: #004080;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background: #003366;
+        }
+        .announcements {
+            background: #ffcc00;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .announcements marquee {
+            font-size: 16px;
+            color: #333;
+        }
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .news-events {
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .news-events h2 {
+            color: #002147;
+            text-align: center;
+        }
+        .news-list {
+            list-style: none;
+            padding: 0;
+        }
+        .news-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news-list li:hover {
+            background: #f9f9f9;
+        }
+        .campus-life {
+            padding: 20px;
+            background: white;
+            text-align: center;
+        }
+        .campus-life h2 {
+            color: #002147;
+        }
+        .campus-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .campus-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://www.nitw.ac.in/stuti/images/Picture2.png" alt="NITW Logo">  <!-- Replace with actual logo path -->
+        </div>
+        <div class="site-title">National Institute of Technology, Warangal</div>
+    </div>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Academics</a>
+        <a href="#">Admissions</a>
+        <a href="#">Departments</a>
+        <a href="#">Research</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="announcements">
+        <marquee behavior="scroll" direction="left">
+            Admissions Open 2025 | NITW Annual Tech Fest | Placement Drive Updates | New Courses Announced!
+        </marquee>
+    </div>
+    <div class="slider-container">
+        <div class="slides">
+            <img src="https://nitw.ac.in/images/nitw1.jpg" style="width:220px;height:220px" alt="Campus Image 1">  <!-- Replace with real image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFQ2yubYVeOxHTQCr_dgifohkmUptxQaQRYQ&s" style="width:220px;height:220px"alt="Campus Image 2">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/51/NITW_ISH.jpg" style="width:220px;height:220px "alt="Campus Image 3">
+        </div>
+    </div>
+    <div class="news-events">
+        <h2>News & Events</h2>
+        <ul class="news-list">
+            <li>📢 Workshop on AI & ML - 20th March</li>
+            <li>🎓 Convocation 2025 Announced - Register Now</li>
+            <li>📄 Research Paper Publications Increased This Year</li>
+            <li>🏆 NITW Ranks in Top 10 Engineering Colleges</li>
+        </ul>
+    </div>
+    <div class="campus-life">
+        <h2>Campus Life</h2>
+        <div class="campus-gallery">
+            <img src="https://nitw.ac.in/api/static/files/hor_all_2024-7-12-13-13-57.jpg" alt="Hostel">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6RePKc5rSIGn6pdTZkyCEgsiNJcStgNogog&s" alt="Library">
+            <img src="https://nitw.ac.in/api/static/files/Annual_Sports_Day_2024-5-1-15-57-34.jpg" alt="Sports">
+            <img src="https://www.nitw.ac.in/siemens/images/lab/advance_manufacturing/AM4.jpg" alt="Lab">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSs5IbzI7QWC-ec7JFxgTvOxJIHn5eCCsOgA&s" alt="Auditorium">
+            <img src="https://content.jdmagicbox.com/comp/warangal/n1/9999px870.x870.181128001807.s8n1/catalogue/coffee-day-beverages-hanamkonda-warangal-coffee-shops-gzwnjlvp8l.jpg" alt="Cafeteria">
+        </div>
+    </div>
+
+</body>
+</html>
